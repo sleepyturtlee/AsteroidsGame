@@ -2,8 +2,8 @@ class Spaceship extends Floater {
   public Spaceship() {
     myCenterX = 300;
     myCenterY = 300;
-    myXspeed = 3;
-    myYspeed = 3;
+    myXspeed = 0;
+    myYspeed = 0;
     myPointDirection = 0; // 0 = point towards right
     
     // when designing the "fancier" spaceship, remember to
@@ -18,6 +18,16 @@ class Spaceship extends Floater {
    
   }
   
+
+  
+  public double getX() {
+    return myCenterX;
+  }
+  
+  public double getY() {
+    return myCenterY;
+  }
+  
   public void hyperspace() {
     myXspeed = 0;
     myYspeed = 0;
@@ -26,3 +36,4 @@ class Spaceship extends Floater {
     myPointDirection = (Math.random() * 360);
   }
   
+}
